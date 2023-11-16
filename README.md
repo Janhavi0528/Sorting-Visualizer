@@ -32,10 +32,11 @@ The Dynamic Sorting Visualizer is a web-based application that provides a visual
 
 -On choosing Sorting Visualizer:
 1. Open the application in your web browser.
-2. Select a sorting algorithm from the dropdown menu.
-3. Adjust the speed slider to control the visualization speed.
-4. Click the "Generate New Array" button to create a new set of data.
-5. Click the "Sort" button to start the visualization of the selected algorithm.
+2. Enter array in "Enter Array" text box to create a new set of data.
+3. Click the "Display as bars" to display new set of data.
+4. Click the "Start Sorting" button to start the visualization of the selected algorithm.
+5. Select a sorting algorithm from the below.
+6. Adjust the speed slider to control the visualization speed.
 
 -On choosing Complexity of Algorithm:
 Explore the space complexity analysis of sorting algorithms.
