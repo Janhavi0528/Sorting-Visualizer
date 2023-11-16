@@ -17,7 +17,7 @@ The Dynamic Sorting Visualizer is a web-based application that provides a visual
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/Janhavi0528/dynamic-sorting-visualizer.git
+    git clone https://github.com/Janhavi0528/Sorting-Visualizer.git
     ```
 
 2. Open the project folder:
