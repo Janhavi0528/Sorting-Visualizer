@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-4HHP888F7Y"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-4HHP888F7Y");
+    </script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Sorting Visualizer</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- CSS only -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar dark-background" style="height: 80px">
+      <a
+        class="navbar-brand text-color"
+        href="#"
+        style="
+          color: white;
+          font-weight: bold;
+          font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+            'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+          font-size: 60px;
+          align-items: center;
+          margin-left: 40%;
+          animation: glow 1s ease-in-out infinite alternate;
+        "
+        >Sorting Visualizer</a
+      >
+    </nav>
+    <div id="sorting" class="flex-container"></div>
+    <div class="col range-input" id="input-panel">
+      <!-- <span id="size" class="label"
+        >Size
+        <input
+          id="size_input"
+          type="range"
+          value="50"
+          min="1"
+          max="100"
+          style="margin-left: 60px; width: 200px"
+        /> 
+   </span> -->
+    </div>
+    <div class="forinput" style="font-size: x-large; font-weight: 500">
+      <label
+        class="fs-1"
+        for="arrayInput"
+        style="
+          color: white;
+          margin-left: 100px;
+          padding-bottom: 30px;
+          font-size: larger;
+        "
+        >Enter array (comma-separated):</label
+      >
+      <input
+        class="p-2"
+        type="text"
+        id="arrayInput"
+        placeholder="e.g., 5, 2, 8, 1, 9"
+      />
+      <button
+        id=""
+        class="sorting btn btn-dark p-3"
+        style="margin-left: 10px; font-size: large"
+        onclick="clearArray()"
+      >
+        Clear Array
+      </button>
+      <span id="speed" class="label" style="margin-left: 500px; color: azure"
+        >Speed
+        <input
+          id="speed_input"
+          type="range"
+          min="20"
+          max="300"
+          value="60"
+          style="margin-left: 10px; width: 200px"
+          ;
+        />
+      </span>
+    </div>
+
+    <div
+      class="btn-group-md btn-group-horizontal center"
+      style="margin-bottom: 40px"
+    >
+      <button
+        type="button"
+        id="submit"
+        class="btn btn-info new"
+        style="
+          margin-right: 10px;
+          padding: 20px;
+          font-size: x-large;
+          font-weight: bold;
+        "
+        onclick="createNewArray()"
+      >
+        Bars as array
+      </button>
+      <button
+        type="button"
+        class="btn btn-success start"
+        style="margin-right: 5px; font-size: x-large; font-weight: bold"
+      >
+        Start Sorting
+      </button>
+      <button
+        type="button"
+        class="btn btn-danger stop"
+        style="margin-left: 5px; font-size: x-large; font-weight: bold"
+        disabled="true"
+      >
+        Stop Sorting
+      </button>
+    </div>
+
+    <div class="col-auto center" style="gap: 10px" id="control-panel">
+      <div style="gap: 10px" class="btn-group-md btn-group-vertical">
+        <button
+          type="button"
+          style="padding: 20px; font-size: x-large"
+          class="btn btn-dark bubbleSort"
+        >
+          Bubble Sort
+        </button>
+        <button
+          type="button"
+          style="padding: 20px; font-size: x-large"
+          class="btn btn-dark mergeSort"
+        >
+          Merge Sort
+        </button>
+      </div>
+      <div style="gap: 10px" class="btn-group-md btn-group-vertical">
+        <button
+          type="button"
+          style="padding: 20px; font-size: x-large"
+          class="btn btn-dark selectionSort"
+        >
+          Selection Sort
+        </button>
+        <button
+          type="button"
+          style="padding: 20px; font-size: x-large"
+          class="btn btn-dark quickSort"
+        >
+          Quick Sort
+        </button>
+      </div>
+      <div style="gap: 10px" class="btn-group-md btn-group-vertical">
+        <button
+          type="button"
+          style="padding: 20px; font-size: x-large"
+          class="btn btn-dark insertionSort"
+        >
+          Insertion Sort
+        </button>
+        <button
+          type="button"
+          style="padding: 20px; font-size: x-large"
+          class="btn btn-dark heapSort"
+        >
+          Heap Sort
+        </button>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+    <script src="sorting.js" async defer></script>
+    <script src="algorithms/bubbleSort.js" async defer></script>
+    <script src="algorithms/mergeSort.js" async defer></script>
+    <script src="algorithms/selectionSort.js" async defer></script>
+    <script src="algorithms/quickSort.js" async defer></script>
+    <script src="algorithms/insertionSort.js" async defer></script>
+    <script src="algorithms/heapSort.js" async defer></script>
+  </body>
+</html>

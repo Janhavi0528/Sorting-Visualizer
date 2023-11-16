@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sorting Algorithm Complexity</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: url("./diamond.avif") no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .container {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+      .row {
+        display: flex;
+        gap: 20px;
+      }
+      .sorting-algorithm {
+        background-color:   #fea1f6;
+        padding: 20px;
+        /* border: 1px solid #ccc; */
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .sorting-algorithm:hover {
+        background-color: #637eeb;
+        transform: scale(1.2);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+      .algorithm-name {
+        font-weight: bold;
+        font-size: 24px;
+      }
+      .complexity-info {
+        margin-top: 5px;
+      }
+      .page-heading {
+        font-size: 36px;
+        font-weight: bold;
+        animation: glow 1s ease-in-out infinite alternate; /* Add glowing effect */
+      }
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px #ea00ff, 0 0 20px #ea00ff, 0 0 30px #ea00ff;
+        }
+        to {
+          text-shadow: 0 0 20px #ea00ff, 0 0 30px #ea00ff, 0 0 40px #ea00ff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="page-heading" style="color: rgb(255, 255, 255)">
+      Time Complexity and Space Complexity
+    </h1>
+    <div class="container">
+      <div class="row">
+        <div class="sorting-algorithm">
+          <span class="algorithm-name">Bubble Sort</span>
+          <div class="complexity-info">
+            <span>Time Complexity:</span>
+            <br />
+            <span>Best Case: O(n)</span>
+            <br />
+            <span>Average Case: O(n^2)</span>
+            <br />
+            <span>Worst Case: O(n^2)</span>
+            <br />
+            <span>Space Complexity: O(1)</span>
+          </div>
+        </div>
+        <div class="sorting-algorithm">
+          <span class="algorithm-name">Selection Sort</span>
+          <div class="complexity-info">
+            <span>Time Complexity:</span>
+            <br />
+            <span>Best Case: O(n^2)</span>
+            <br />
+            <span>Average Case: O(n^2)</span>
+            <br />
+            <span>Worst Case: O(n^2)</span>
+            <br />
+            <span>Space Complexity: O(1)</span>
+          </div>
+        </div>
+        <div class="sorting-algorithm">
+          <span class="algorithm-name">Insertion Sort</span>
+          <div class="complexity-info">
+            <span>Time Complexity:</span>
+            <br />
+            <span>Best Case: O(n)</span>
+            <br />
+            <span>Average Case: O(n^2)</span>
+            <br />
+            <span>Worst Case: O(n^2)</span>
+            <br />
+            <span>Space Complexity: O(1)</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="sorting-algorithm">
+          <span class="algorithm-name">Merge Sort</span>
+          <div class="complexity-info">
+            <span>Time Complexity:</span>
+            <br />
+            <span>Best Case: O(n log n)</span>
+            <br />
+            <span>Average Case: O(n log n)</span>
+            <br />
+            <span>Worst Case: O(n log n)</span>
+            <br />
+            <span>Space Complexity: O(n)</span>
+          </div>
+        </div>
+        <div class="sorting-algorithm">
+          <span class="algorithm-name">Quick Sort</span>
+          <div class="complexity-info">
+            <span>Time Complexity:</span>
+            <br />
+            <span>Best Case: O(n log n)</span>
+            <br />
+            <span>Average Case: O(n log n)</span>
+            <br />
+            <span>Worst Case: O(n^2)</span>
+            <br />
+            <span>Space Complexity: O(log n)</span>
+          </div>
+        </div>
+        <div class="sorting-algorithm">
+          <span class="algorithm-name">Heap Sort</span>
+          <div class="complexity-info">
+            <span>Time Complexity:</span>
+            <br />
+            <span>Best Case: O(n log n)</span>
+            <br />
+            <span>Average Case: O(n log n)</span>
+            <br />
+            <span>Worst Case: O(n log n)</span>
+            <br />
+            <span
+              >Space Complexity: O(1) (in-place) or O(n) (not in-place)</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

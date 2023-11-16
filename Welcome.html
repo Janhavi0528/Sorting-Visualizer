@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Choose an Option</title>
+    <style>
+      body {
+        background: url("./grid\(o\).webp") no-repeat center center fixed;
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      h1 {
+        color: #333;
+        text-align: center;
+        animation: glow 1s ease-in-out infinite alternate;
+      }
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 10px #3f4fdc, 0 0 20px #3f4fdc, 0 0 30px #3f4fdc;
+        }
+        to {
+          text-shadow: 0 0 20px #3f4fdc, 0 0 30px #3f4fdc, 0 0 40px #3f4fdc;
+        }
+      }
+      label {
+        display: block;
+        background-color: #3f4fdc;
+        color: black;
+        font-size: larger;
+        padding: 30px 60px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px;
+        text-align: center;
+        transition: transform 0.2s;
+      }
+
+      label:hover {
+        transform: scale(1.1); /* Increase the size on hover */
+      }
+
+      input[type="radio"] {
+        display: none;
+      }
+      input[type="radio"]:checked + label {
+        background-color: #008cba;
+      }
+      input[type="radio"]:checked + label:hover {
+        background-color: #005a86;
+      }
+      input[type="radio"] + label:hover {
+        background-color: #f2bc98;
+      }
+      .button-container {
+        text-align: center;
+      }
+      input[type="button"] {
+        background-color: rgb(129, 136, 192);
+        color: black;
+        padding: 20px 40px; /* Increase the padding for larger size */
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px;
+        transition: transform 0.2s;
+      }
+      input[type="button"]:hover {
+        background-color: #6adf66;
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: white; font-size: 40px">Choose an Option</h1>
+    <form>
+      <input
+        type="radio"
+        id="sortingVisualizer"
+        name="option"
+        value="sortingVisualizer"
+      />
+      <label style="font-size: x-large" for="sortingVisualizer"
+        >Sorting Visualizer</label
+      >
+      <input
+        type="radio"
+        id="complexityOfSorting"
+        name="option"
+        value="complexityOfSorting"
+      />
+      <label style="font-size: x-large" for="complexityOfSorting"
+        >Complexity of Algorithms</label
+      >
+      <div class="button-container">
+        <input
+          style="font-size: x-large"
+          type="button"
+          value="Submit"
+          onclick="selectOption()"
+        />
+      </div>
+    </form>
+
+    <script>
+      function selectOption() {
+        const sortingVisualizer = document.getElementById("sortingVisualizer");
+        const complexityOfSorting = document.getElementById(
+          "complexityOfSorting"
+        );
+
+        if (sortingVisualizer.checked) {
+          window.location.href = "index.html"; // Replace with the URL of your sorting visualizer page.
+        } else if (complexityOfSorting.checked) {
+          window.location.href = "complex.html"; // Replace with the URL of your complexity of sorting page.
+        } else {
+          alert("Please select an option.");
+        }
+      }
+    </script>
+  </body>
+</html>
